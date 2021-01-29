@@ -5,18 +5,24 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="style.css">
 
-
 <body>
     
-<!-- Trigger/Open The Modal -->
-<button id="myBtn" onclick='openModal()'>Open Modal</button>
+<button id="myBtn" onclick='openModal()'>+</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
+    <form>
+        <label for='name'>Title:</label><br>
+        <input type="text" id='title' value='Title'><br><br>
+        <label for='name'>Author:</label><br>
+        <input type="text" id='author' value='Author'><br><br>
+        <label for='name'>Number of pages:</label><br>
+        <input type="text" id='author' value='Number of pages'><br><br>
+        <input type="submit" value="Add Book">
+    </form>
   </div>
 </div>
 <script src="script.js"></script>
