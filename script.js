@@ -4,12 +4,6 @@ Add function that can take user input and store the new book objects into an arr
 Write function that loops through array and displays each book on the page
 */
 
-let myLibrary = [];
-
-function Book() {
-
-}
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -20,7 +14,7 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+function openModal() {
   modal.style.display = "block";
 }
 
@@ -35,6 +29,14 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+let myLibrary = [];
+
+function Book() {
+
+}
+
+
 
 function addBookToLibrary() {
 
