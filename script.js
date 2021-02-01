@@ -13,7 +13,6 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
 function openModal() {
   modal.style.display = "block";
 }
@@ -32,11 +31,12 @@ window.onclick = function(event) {
 
 let myLibrary = [];
 
-function Book() {
-
+function Book(title, author, pages ,read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
-
-
 
 function addBookToLibrary() {
 
