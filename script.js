@@ -44,4 +44,19 @@ let newBook;
 function addBookToLibrary() {
     newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+
+    
+}
+
+//Create book render onscreen as added
+const book1 = new Book('The Hobbit', 'JRR Tolkien', 295, false);
+
+function bookForm() {
+    const display = document.getElementById('libraryContainer');
+    const books = document.getElementById('.book');
+    books.forEach(book => display.removeChild(book));
+    
+    for(let i=0; i<myLibrary.length; i++) {
+        createBook(myLibrary[1]);  
+    }
 }
