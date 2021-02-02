@@ -29,8 +29,7 @@ window.onclick = function(event) {
   }
 }
 
-let myLibrary = [];
-
+//constructor
 function Book(title, author, pages ,read) {
     this.title = title;
     this.author = author;
@@ -38,6 +37,11 @@ function Book(title, author, pages ,read) {
     this.read = read;
 }
 
-function addBookToLibrary() {
+//book array
+let myLibrary = [];
+let newBook;
 
+function addBookToLibrary() {
+    newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
 }
