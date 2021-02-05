@@ -44,10 +44,13 @@ let newBook;
 function addBookToLibrary() {
     newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    //saves array to local storage
+    setData();
+    bookForm();
+    form.reset();
 }
 
 //Create book render onscreen as added
-const book1 = new Book('The Hobbit', 'JRR Tolkien', 295, false);
 //function that loops through array and displays book
 function bookForm() {
     const display = document.getElementById('libraryContainer');
@@ -103,7 +106,7 @@ function createBook(item) {
     removeBtn.addEventListener('click', () =>  {
         item.read = !item.read;
         setData();
-        render();
+        bookForm();
     });
 
     function setData() {
