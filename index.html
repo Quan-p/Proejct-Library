@@ -7,7 +7,7 @@
 <header>Project: Library</header>
 <body>
     
-<button id="myBtn" onclick='openModal()'>+</button>
+<button id="myBtn" onclick='openModal()'>New Book</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -19,14 +19,12 @@
         <input type="text" id='title' value='Title'><br><br>
         <label for='author'>Author:</label><br>
         <input type="text" id='author' value='Author'><br><br>
-        <label for='pageNumber'>Number of pages:</label><br>
-        <input type="text" id='pageNumber' value='Number of pages'><br><br>
+        <label for='pages'>Number of pages:</label><br>
+        <input type="text" id='pages' value='Number of pages'><br><br>
         <label for="read">Have you read this book?</label>
-        <input type="radio" id="yes" name='readCheck' value="yesRead">
-        <label for='yes'>Yes</label>
-        <input type="radio" id="no" name='readCheck' value="noRead">
-        <label for='no'>No</label><br><br>
-        <input type="submit" value="Add Book">
+        <input type="checkbox" id="read" name='read' value="yes"><br><br>
+        
+        <input type="submit" value="Add Book" onclick='addBookToLibrary()'>
         
     </form>
   </div>
