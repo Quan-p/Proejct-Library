@@ -105,4 +105,8 @@ function createBook(item) {
         setData();
         render();
     });
+
+    function setData() {
+        localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+    }
 }
