@@ -53,17 +53,17 @@ function addBookToLibrary() {
 //Create book render onscreen as added
 //function that loops through array and displays book
 function bookForm() {
-    const display = document.getElementById('libraryContainer');
-    const books = document.getElementById('.book');
+    const display = document.getElementById('Library-container');
+    const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
     
     for(let i=0; i<myLibrary.length; i++) {
-        createBook(myLibrary[1]);  
+        createBook(myLibrary[i]);  
     }
 }
 //Creates the DOM elements for the book display
 function createBook(item) {
-    const library = document.querySelector('#libraryContainer');
+    const library = document.querySelector('#Library-container');
     const bookDiv = document.createElement('div');
     const titleDiv = document.createElement('div');
     const authDiv = document.createElement('div');
@@ -83,7 +83,7 @@ function createBook(item) {
     bookDiv.appendChild(authDiv);
     
     pageDiv.textContent = item.pages;
-    pagesDiv.classList.add('pages');
+    pageDiv.classList.add('pages');
     bookDiv.appendChild(pageDiv);
 
     readBtn.classList.add('readBtn');
@@ -91,10 +91,10 @@ function createBook(item) {
     if(item.read===false) {
         readBtn.textContent='Not Read';
         //changes read status to red or green
-        readBtn.style.backgroundColor='red';
+        readBtn.style.backgroundColor='#e04f63';
     } else {
         readBtn.textContent='Read';
-        readBtn.style.backgroundColor='green';
+        readBtn.style.backgroundColor='#63da63';
     }
 
     removeBtn.textContent='Remove';
@@ -108,8 +108,22 @@ function createBook(item) {
         setData();
         bookForm();
     });
-
+}
+    //sets library to be stored in local storage
     function setData() {
         localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
     }
-}
+
+    //if page refreshes, pull book from local storage
+    function bookRestore() {
+        if(!localStorage.myLibrary) {
+            bookForm();
+        } else {
+            let objects = localStorage.getItem('myLibrary')
+            objects = JSON.parse(objects);
+            myLibrary = objects;
+            bookForm();
+        }
+    }
+    bookRestore();
+
