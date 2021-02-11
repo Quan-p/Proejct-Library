@@ -42,6 +42,7 @@ let myLibrary = [];
 let newBook;
 
 function addBookToLibrary() {
+    
     newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
     setData();//saves array to local storage
