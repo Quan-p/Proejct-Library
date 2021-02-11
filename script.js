@@ -31,10 +31,10 @@ window.onclick = function(event) {
 
 //constructor
 function Book(title, author, pages ,read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+    this.title = form.title.value;
+    this.author = form.author.value;
+    this.pages = form.pages.value;
+    this.read = form.read.checked;
 }
 
 //book array
@@ -44,8 +44,7 @@ let newBook;
 function addBookToLibrary() {
     newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
-    //saves array to local storage
-    setData();
+    setData();//saves array to local storage
     bookForm();
     form.reset();
 }
@@ -57,10 +56,11 @@ function bookForm() {
     const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
     
-    for(let i=0; i<myLibrary.length; i++) {
+    for (let i=0; i<myLibrary.length; i++) {
         createBook(myLibrary[i]);  
     }
 }
+
 //Creates the DOM elements for the book display
 function createBook(item) {
     const library = document.querySelector('#Library-container');
@@ -104,6 +104,12 @@ function createBook(item) {
     library.appendChild(bookDiv);
 
     removeBtn.addEventListener('click', () =>  {
+        myLibrary.splice(myLibrary.indexOf(item),1);
+        setData();
+        bookForm();
+    });
+
+    readBtn.addEventListener('click', () => {
         item.read = !item.read;
         setData();
         bookForm();
