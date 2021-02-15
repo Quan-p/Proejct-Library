@@ -48,6 +48,10 @@ header {
     text-decoration: underline black;
 }
 
+body {
+    background-color: #C7CEDB;
+}
+
 #myBtn {
     margin-top: 30px;
     font-size: 18px;
@@ -55,7 +59,7 @@ header {
     border-radius: 2em;
     text-align: center;
     padding: 0.3em 1.2em;
-    background-color: ;
+    background-color: #A0AAB2;
     transition: all 0.5s;
 }
 #myBtn:hover {
