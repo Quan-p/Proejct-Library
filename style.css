@@ -63,6 +63,16 @@ body {
     transition: all 0.5s;
 }
 #myBtn:hover {
-    background-color: cadetblue;
+    background-color: dcadetblue;
 }
 
+#modalForm {
+    background-color: #A0AAB2;
+    border-radius: 1em;
+}
+
+#addBtn {
+    border-radius: 2em;
+    font-size: 15px;
+    padding: 6px 15px;
+}
