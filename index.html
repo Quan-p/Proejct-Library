@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-<meta charset="UTF-8">
+<meta charset='UTF-8'>
 <title>Project-Library</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel='stylesheet' href='style.css'>
+<link rel='preconnect' href='https://fonts.gstatic.com'>
+<link href='https://fonts.googleapis.com/css2?family=Poppins&display=swap' rel='stylesheet'>
 </head>
 
 <header>Project: Library</header>
 <body>
     
-<button id="myBtn" onclick='openModal()'>New Book</button>
+<button id='myBtn' onclick='openModal()'>New Book</button>
 
 <!-- The Modal -->
-<div id="myModal" class="modal">
+<div id='myModal' class='modal'>
   <!-- Modal content -->
-  <div id="modalForm" class="modal-content">
-    <span class="close">&times;</span>
+  <div id='modalForm' class='modal-content'>
+    <span class='close'>&times;</span>
     <form id='form'>
         <label for='title'>Title:</label><br>
-        <input type="text" id='title' placeholder='Title'><br><br>
+        <input type='text' id='title' placeholder='Title'><br><br>
         <label for='author'>Author:</label><br>
-        <input type="text" id='author' placeholder='Author'><br><br>
+        <input type='text' id='author' placeholder='Author'><br><br>
         <label for='pages'>Number of pages:</label><br>
-        <input type="text" id='pages' placeholder='Number of pages'><br><br>
-        <label for="read">Have you read this book?</label>
-        <input type="checkbox" id="read" name='read' value="yes"><br><br>
+        <input type='text' id='pages' placeholder='Number of pages'><br><br>
+        <label for='read'>Have you read this book?</label>
+        <input type='checkbox' id='read' name='read' value='yes'><br><br>
         
-        <input type="submit" id='addBtn' value="Add Book" onclick='addBookToLibrary()'>
+        <input type='submit' id='addBtn' value='Add Book' onclick='addBookToLibrary()'>
         
     </form>
   </div>
@@ -37,6 +37,6 @@
 <div id='Library-container'>
 
 </div>
-<script src="script.js"></script>
+<script src='script.js'></script>
 </body>
 </html>
