@@ -59,9 +59,10 @@ body {
     padding: 0.3em 1.2em;
     background-color: #B4BCC7;
     transition: all 0.5s;
+    outline: none;
 }
 #myBtn:hover {
-    background-color: #A0AAB2;
+    background-color: #9DA1AD;
 }
 
 #modalForm {
@@ -73,13 +74,16 @@ body {
     border-radius: 2em;
     font-size: 15px;
     padding: 6px 15px;
+    outline: none;
 }
 
 .readBtn {
     border-radius: 2em;
+    outline: none;
 }
 
 #removeBtn {
     border-radius: 2em;
     margin-left: 5px;
+    outline: none;
 }
