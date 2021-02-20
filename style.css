@@ -94,12 +94,17 @@ body {
 }
 
 .book {
+    background-color: #9A97A7;
+    color: #2e3532;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     border-radius: 8px;
     border: 3px solid #2E3532;
     padding: 7px 7px;
     position: relative;
-    width: 150px;
+    width: 200px;
     height: auto;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    text-align: center;
 }
