@@ -52,6 +52,8 @@ function addBookToLibrary() {
     form.reset();
 }
 
+document.getElementById('form').onsubmit = function() {addBookToLibrary()};
+
 //Create book render onscreen as added
 //function that loops through array and displays book
 function bookForm() {
