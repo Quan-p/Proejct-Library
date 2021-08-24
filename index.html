@@ -21,15 +21,15 @@
     <span class='close'>&times;</span>
     <form id='form'>
         <label for='title'>Title:</label><br>
-        <input type='text' id='title' placeholder='Title'><br><br>
+        <input type='text' id='title' placeholder='Title' required><br><br>
         <label for='author'>Author:</label><br>
-        <input type='text' id='author' placeholder='Author'><br><br>
+        <input type='text' id='author' placeholder='Author' required><br><br>
         <label for='pages'>Number of pages:</label><br>
-        <input type='text' id='pages' placeholder='Number of pages'><br><br>
+        <input type='text' id='pages' placeholder='Number of pages' required><br><br>
         <label for='read'>Have you read this book?</label>
         <input type='checkbox' id='read' name='read' value='yes'><br><br>
         
-        <input type='submit' id='addBtn' value='Add Book' onclick='addBookToLibrary()'>
+        <input type='submit' id='addBtn' value='Add Book'>
         
     </form>
   </div>
