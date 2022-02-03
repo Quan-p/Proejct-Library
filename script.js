@@ -1,8 +1,10 @@
-/*
-Books will be stored into a simple array
-Add function that can take user input and store the new book objects into an array
-Write function that loops through array and displays each book on the page
-*/
+import { initializeApp } from 'firebase/app';
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+    //...
+};
+  
+    const app = initializeApp(firebaseConfig);
 
 // Get the modal
 var modal = document.getElementById("myModal");
