@@ -11,12 +11,19 @@
 
 <body>
   <nav>
-    <h1>Project: Library</h1>
-    <div>
-      <button  id='log-in'>Log In</button>
+    <div class='nav-title'>
+      <h1>Project: Library</h1>
     </div>
-  </nav>    
-<button id='myBtn' onclick='openModal()'>New Book</button>
+    
+    <div class="log-in-container">
+      <button id='loginBtn'>Log In</button>
+    </div>
+  </nav>
+  <div class='main'>
+    <button id='new-book' onclick='openModal()'>New Book</button>
+    <div id='Library-container'></div>
+  </div>    
+
 
 <!-- The Modal -->
 <div id='myModal' class='modal'>
@@ -37,9 +44,7 @@
     </form>
   </div>
 </div>
-<div id='Library-container'>
 
-</div>
 <script src='script.js'></script>
 <script type="module">
   // Import the functions you need from the SDKs you need
